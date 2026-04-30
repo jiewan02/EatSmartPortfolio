@@ -1,0 +1,111 @@
+.resultsWrapper {
+  width: 80%;
+  margin-top: 8px;
+  min-height: 550px;
+}
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resultsTitle {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.resultList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.resultItem {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  padding: 20px; /* remove the duplicated padding */
+  margin-bottom: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.itemImageCard {
+  width: 100px; /* fixed width, this is good */
+  height: 140px;
+  flex-shrink: 0; /* ensures it never shrinks */
+  border-radius: 6px;
+}
+
+.itemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill the box while cropping if needed */
+  object-position: center; /* keep the center of the image */
+  display: block;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+
+  flex: 1; /* fills ALL remaining space */
+  min-width: 0;
+}
+
+.itemHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.itemScore {
+  margin-left: 8px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.metaRow {
+  font-size: 0.9rem;
+  margin-top: 4px;
+  color: #333;
+}
+
+.metaRowSmall {
+  font-size: 0.85rem;
+  margin-top: 4px;
+  color: #555;
+}
+
+.emptyText {
+  color: #555;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.tagBox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tag {
+  color: white;
+  background-color: rgb(93, 159, 93);
+  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 5px;
+}

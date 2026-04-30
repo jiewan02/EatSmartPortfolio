@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment files
+.env
+*.env
+data-pipeline/.env
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Data files (large / sensitive — share separately)
+model-server/dataset_preprocessed.csv
+model-server/recipe_embeddings.npy
+data-pipeline/*.csv
+data-pipeline/*.npy
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build output
+client/build/

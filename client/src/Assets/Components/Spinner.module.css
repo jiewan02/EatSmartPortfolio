@@ -1,0 +1,147 @@
+/* Spinner.module.css */
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  /* min-height: 60px; */
+}
+
+.spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+/* 사이즈 옵션 */
+.small {
+  width: 40px;
+  height: 40px;
+}
+
+.medium {
+  width: 60px;
+  height: 60px;
+}
+
+.large {
+  width: 80px;
+  height: 80px;
+}
+
+/* 점 스타일 */
+.dot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: gray;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 각 점의 위치 - 8개 점이 원형으로 배치 */
+.dot:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.dot:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.dot:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.dot:nth-child(4) {
+  transform: rotate(135deg);
+}
+
+.dot:nth-child(5) {
+  transform: rotate(180deg);
+}
+
+.dot:nth-child(6) {
+  transform: rotate(225deg);
+}
+
+.dot:nth-child(7) {
+  transform: rotate(270deg);
+}
+
+.dot:nth-child(8) {
+  transform: rotate(315deg);
+}
+
+/* 회전 애니메이션 */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1.4s linear infinite;
+}
+
+/* 각 점의 불투명도 애니메이션 */
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dot::after {
+  animation: fade 1.4s ease-in-out infinite;
+}
+
+.dot:nth-child(1)::after {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2)::after {
+  animation-delay: 0.175s;
+}
+
+.dot:nth-child(3)::after {
+  animation-delay: 0.35s;
+}
+
+.dot:nth-child(4)::after {
+  animation-delay: 0.525s;
+}
+
+.dot:nth-child(5)::after {
+  animation-delay: 0.7s;
+}
+
+.dot:nth-child(6)::after {
+  animation-delay: 0.875s;
+}
+
+.dot:nth-child(7)::after {
+  animation-delay: 1.05s;
+}
+
+.dot:nth-child(8)::after {
+  animation-delay: 1.225s;
+}

@@ -1,0 +1,170 @@
+/* 화면 전체를 461x874 기준 포트레이트로 맞추는 래퍼 */
+.container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1000px;
+  max-height: 900px;
+  margin: 0 auto;
+  /* background-color: #000; */
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* 페이드 아웃 */
+.fadeOut {
+  opacity: 0;
+}
+
+/* 핸드폰 프레임 */
+.phoneFrame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* 상단 상태바 */
+.statusBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fdfdfd;
+  font-size: 14px;
+  z-index: 3;
+}
+
+.statusLeft {
+  font-weight: 500;
+}
+
+.statusCenter {
+  flex: 1;
+  margin: 0 40px;
+  height: 18px;
+  border-radius: 999px;
+  background-color: #000;
+}
+
+.statusRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 12px;
+}
+
+.battery {
+  width: 18px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1.5px solid #f4f4f4;
+  position: relative;
+}
+
+.battery::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 2px;
+  width: 2px;
+  height: 6px;
+  border-radius: 1px;
+  background-color: #f4f4f4;
+}
+
+/* 메인 이미지 */
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 텍스트 오버레이 */
+.textOverlay {
+  position: absolute;
+  inset: 0;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* "오늘은 뭐 먹지?" */
+.question {
+  margin: 0 0 12px 0;
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  border-radius: 10px; /* ← 여기에 radius 적용 */
+  overflow: hidden;
+}
+
+/* --------------------------
+   오렌지 "띵동!" 박스 수정
+   -------------------------- */
+.dingdongBox {
+  background-color: #e87829;
+  padding: 22px 40px;
+  margin-top: 8px;
+
+  /* 왼쪽 밖에서 들어온 느낌 */
+  position: relative;
+  left: -24px;
+  width: calc(100% + 50px);
+
+  display: flex;
+  justify-content: center;
+
+  /* 오른쪽만 둥글게 */
+  border-radius: 0 20px 0 0;
+
+  z-index: 2; /* 가장 위 */
+}
+
+.dingdongText {
+  color: #ffffff;
+  font-size: 46px;
+  font-weight: 800;
+}
+
+/* --------------------------
+   아래 흰색 shadow bar 추가
+   -------------------------- */
+.bottomShadow {
+  position: absolute;
+  bottom: -10px;
+  left: -50px;
+  width: calc(100% + 50px);
+
+  height: 26px;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  /* 위쪽 둥근 모서리 */
+  /* border-top-left-radius: 20px; */
+  border-bottom-right-radius: 20px;
+
+  /* 오렌지 박스 아래에서 올라오는 느낌 */
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+
+  z-index: 1; /* 뒤 */
+}

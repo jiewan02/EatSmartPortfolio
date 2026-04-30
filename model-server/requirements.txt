@@ -1,0 +1,13 @@
+flask
+openai
+python-dotenv
+numpy
+pandas
+torch
+transformers
+accelerate
+bitsandbytes
+sentencepiece
+neo4j
+requests
+beautifulsoup4

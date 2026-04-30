@@ -1,0 +1,117 @@
+.statusBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fdfdfd;
+  font-size: 14px;
+  z-index: 3;
+}
+
+.statusLeft {
+  font-weight: 500;
+}
+
+.statusCenter {
+  flex: 1;
+  margin: 0 40px;
+  height: 18px;
+  border-radius: 999px;
+  background-color: #000;
+}
+
+.statusRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 12px;
+}
+
+.battery {
+  width: 18px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1.5px solid #f4f4f4;
+  position: relative;
+  background-color: #f4f4f4;
+}
+
+.battery::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 2px;
+  width: 2px;
+  height: 6px;
+  border-radius: 1px;
+  background-color: #f4f4f4;
+}
+
+.headerContainer {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #de6f0e;
+  padding: 45px 30px 10px 30px;
+}
+.hamburgerContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.hamburger {
+  position: relative;
+  width: 32px;
+  height: 26px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animation when menu is OPEN */
+.open .line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.open .line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Optional hover effect */
+.hamburger:hover .line {
+  background-color: #000;
+}
+
+.headerText {
+  font-size: 45px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
